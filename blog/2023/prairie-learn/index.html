@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>sample-posts | Sanjit Basker</title>
+    <title>PrairieLearn Online Modules | Sanjit Basker</title>
     <meta name="author" content="Sanjit  Basker">
-    <meta name="description" content="My personal portfolio website (draft iteration, for now).
-">
+    <meta name="description" content="implementing and testing the paired-vector element">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -22,7 +21,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
 
     <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
 
@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%8B&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://sanjitbasker.github.io/blog/category/sample-posts/">
+    <link rel="canonical" href="https://sanjitbasker.github.io/blog/2023/prairie-learn/">
     
     <!-- Dark Mode -->
     
@@ -73,9 +73,9 @@
               </li>
               
               <!-- Blog -->
-              <!-- <li class="nav-item active">
+              <li class="nav-item active">
                 <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
-              </li> -->
+              </li>
 
               <!-- Other pages -->
               <!--
@@ -111,76 +111,103 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
+<!-- Page/Post style -->
+<style type="text/css">
+  img.center {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #FFFFFF
+} div.caption {
+ margin-left: auto;
+ margin-right: auto;
+ width: 500px;
+}
+
+</style>
+
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-tag fa-sm"></i> sample-posts </h1>
-    <p class="post-description"> an archive of posts in this category </p>
+    <h1 class="post-title">PrairieLearn Online Modules</h1>
+    <p class="post-meta">January 1, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Dec 10, 2022</th>
-          <td>
-              <a class="post-link" href="/blog/2022/giscus-comments/">a post with giscus comments</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Sep 28, 2020</th>
-          <td>
-              <a class="post-link" href="/blog/2020/github-metadata/">a post with github metadata</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Sep 28, 2020</th>
-          <td>
-              <a class="post-link" href="/blog/2020/twitter/">a post with twitter</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Oct 20, 2015</th>
-          <td>
-              <a class="post-link" href="/blog/2015/disqus-comments/">a post with disqus comments</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Oct 20, 2015</th>
-          <td>
-              <a class="post-link" href="/blog/2015/math/">a post with math</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Jul 15, 2015</th>
-          <td>
-              <a class="post-link" href="/blog/2015/code/">a post with code</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">May 15, 2015</th>
-          <td>
-              <a class="post-link" href="/blog/2015/images/">a post with images</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Mar 15, 2015</th>
-          <td>
-              <a class="post-link" href="/blog/2015/formatting-and-links/">a post with formatting and links</a>
-          </td>
-        </tr>
-      
-      </table>
-    </div>
+  <article class="post-content">
+    <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>I designed new online exercises with MAE 2020 instructors for free-body diagrams 🏗️</li>
+  <li>I implemented the frontend and backend of a new feature using FabricJS and Python <a href="https://github.com/PrairieLearn/PrairieLearn/pull/4466" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+</li>
+  <li>I co-authored a <a href="https://peer.asee.org/improving-understanding-of-reaction-forces-in-free-body-diagrams-using-a-paired-vector-object-in-prairie-learn" rel="external nofollow noopener" target="_blank">paper</a> on improvement in student outcomes and got a shiny plaque 🤩</li>
+</ul>
+
+<p><br>
+<br></p>
+
+<h2 id="background-on-prairielearn">Background on PrairieLearn</h2>
+
+<p>PrairieLearn is an online learning management system used by various universities in the US. PrairieLearn supports problems with a drawing canvas, which we use to build students’ skills in drawing free-body diagrams (FBDs).</p>
+
+<p><img src="/assets/img/pl-images/problem-1-dark.png" alt="old PL problem" width="500" class="center"></p>
+
+<div class="caption">Here is a sample problem statement from the PrairieLearn system. The question asks students to complete a free-body diagram by drawing arrows on a canvas.</div>
+
+<p>One particularly challenging application of FBDs for new learners in a statics course is for “frames” consisting of multiple members, pinned together and loaded with forces. When analyzing a frame, students are taught to first draw an overall FBD and then an “exploded” FBD, which contains separate entities for each component of the frame and also shows the internal forces between components.</p>
+
+<p><img src="/assets/img/pl-images/beer.png" alt="textbook excerpt" width="500" class="center"></p>
+
+<div class="caption">Here is a free-body diagram with both external forces (T, W, A<sub>x</sub>, A<sub>y</sub>) and internal forces (C<sub>x</sub>, C<sub>y</sub>, F<sub>BE</sub>). The internal forces appear where members are pinned together, and consist of forces with the same magnitude and opposite direction.<br>Taken from <i>Statics and Mechanics of Materials</i> by Beer.</div>
+
+<p>A major point of confusion for students in the course is how to treat reactions on members separated from each other at pins, including (1) identifying two-force members and (2) identifying pairs of forces that form equal and opposite reactions. PrairieLearn supports grading individual forces based on their placement and orientation, but there was no mechanism to grade “exploded” FBDs for frames according to (1) and (2), which significantly limited the set of problems the platform could support and, in turn, the utility of the platform for our students.</p>
+
+<p><br></p>
+
+<h2 id="investigating-client-needs">Investigating Client Needs</h2>
+
+<p>I met with the professors of our course as well as the programmers who developed the initial canvas/drawing feature in PrairieLearn to come up with a plan for implementation. We first discussed whether the current grading logic could be extended to identify and grade pairs of opposite forces in our problems specific for frames. While this would be relatively straightforward to implement, this wouldn’t be the best fit for our students because we wanted them to conceptualize the equal-and-opposite internal forces (which appear in pairs whenever two elements are separated) differently from the external forces on a frame (which are simply copied over from the overall FBD to the “exploded” FBD).</p>
+
+<p><img src="/assets/img/pl-images/sketch.png" alt="drawing" width="500" class="center"></p>
+
+<div class="caption">Here's a sketch I developed for our initial meeting. The coloring indicates that the vectors appear in pairs, and the dotted lines show the students that the forces are paired to each other.</div>
+
+<p>We decided on a drawing element that would allow students to insert two arrows at once onto the free-body diagram, which indicated to the backend that they had to be linked for grading. To be correct, the two arrows had to have opposite orientation (e.g. if one of them points left, the other has to point right). Since this was one of the concepts that students were learning, we didn’t enforce this in the user interface: students would still be able to draw incorrect FBDs with improperly aligned forces and get feedback that the arrows need to be aligned.</p>
+
+<p><br></p>
+
+<h2 id="final-product-and-documentation">Final Product and Documentation</h2>
+
+<p>I implemented the frontend using the FabricJS canvas library, which PrairieLearn already extends for its drawing elements. I added a new class to extend <code class="language-plaintext highlighter-rouge">PLDrawingBaseElement</code> which cycles through colors for the student: this way, if there are multiple forces on an “exploded” free-body diagram, the student knows which forces are paired with each other. Unpaired forces remain red to be consistent with normal FBDs.</p>
+
+<p><img src="/assets/img/pl-images/soln-dark.png" alt="drawing" width="500" class="center"></p>
+
+<div class="caption">Here's the final product. The forces in this diagram correspond to the forces in parts (b)-(c) of the first figure, with pairs indicated by forces of the same color.</div>
+
+<p>After implementing the grading logic in Python, I wrote an entry in the <a href="https://prairielearn.readthedocs.io/en/latest/pl-drawing/#pl-paired-vector-element" rel="external nofollow noopener" target="_blank">documentation</a> and waited for my <a href="https://github.com/PrairieLearn/PrairieLearn/pull/4466" rel="external nofollow noopener" target="_blank">pull request</a> to be reviewed and merged. After the CI/CD process was complete, we were all set to start using the element in our course.</p>
+
+<p>In order to determine the effectiveness of the new paired-vector element, we conducted an A/B test in which half of our students were given a homework assignment involving the new element, and half of the students were given simpler questions that could be supported using PrairieLearn’s old features. We found that students who practiced with the new paired vectors better learned to draw exploded FBDs. I co-authored a <a href="https://peer.asee.org/improving-understanding-of-reaction-forces-in-free-body-diagrams-using-a-paired-vector-object-in-prairie-learn" rel="external nofollow noopener" target="_blank">paper</a> on the motivation and results of this project, and we won the Best Paper Award.</p>
+
+<p><br></p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>This project taught me the importance of documentation. Not only did I read the user-facing documentation when familiarizing myself with the PrairieLearn system, I also read the developer documentation to make sure I was following all the right steps to add my feature. Finally, I contributed documentation for the feature that I added, with a helpful example so that other instructors could benefit from my work.</p>
+
+<p>While I had used version control before for personal projects, this was my first time seeing a CI/CD pipeline. I also had to fight with some linting/code quality checkers before my pull request was ready to merge.
+<br>
+All of these tools are standard in industry, but this project was my first exposure to them 🙂</p>
+
+<!-- For this assignment, I’m asking you to reflect on what you’ve done and explain the choices you’ve made in terms of some of the language we have learned—from keywords in lectures, examples we’ve gone over, or points made in writer/designer. Your goal, in other words, is to justify Given that, what aspects of your site did you choose to make that way, and how do they showcase your professionalism as a computer scientist or an aerospace engineer? -->
+
+<!-- https://vb-cs.github.io/Professional-Portfolio/index.html#hero -->
+
   </article>
+
 
 </div>
 
