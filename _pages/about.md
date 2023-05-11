@@ -13,6 +13,17 @@ profile:
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 news: true  # includes a list of news items
 social: true  # includes social icons at the bottom of the page
+_styles: >
+  img.center {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #2698BA
+  }
+  div.caption {
+   margin-left: auto;
+   margin-right: auto;
+   width: 500px;
+  }
 ---
 
 Hi, I'm Sanjit! I study Computer Science at Cornell University, with a minor in Aerospace Engineering 🚀.
@@ -25,6 +36,22 @@ I love thinking about problems in mathematics and computer science. As a TA for 
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+
+# Projects
+<br>
+
+## PrairieLearn Online Modules <a href="https://github.com/PrairieLearn/PrairieLearn/pull/4466"><i class="fab fa-github"></i></a> <a href="/blog/2023/prairie-learn/"><i class="fa-solid fa-file-invoice"></i></a>
+<a href="/blog/2023/prairie-learn/"><img src="/assets/img/pl-images/loppers.png" alt="drawing" width="500" class="center"/></a>
+
+## OcTET <a href="https://github.com/SanjitBasker/octet-public"><i class="fab fa-github"></i></a>
+* I led a team of 3 to create Octet, an Emacs-like text editor written in OCaml.
+* I implemented and compared multiple implementations of the text buffer to improve worst-case performance on operations such as pasting many lines of input.
+* I tested the backend extensively with OUnit, writing glass-box and random tests.
+
 <br>
 <br>
 <br>
@@ -143,24 +170,6 @@ I love thinking about problems in mathematics and computer science. As a TA for 
 * I used a server-client architecture to offboard computations, improving efficiency 5x.
 
 
-<br>
-<br>
-<br>
-<br>
-# Projects
-<br>
-
-
-## OcTET <a href="https://github.com/SanjitBasker/octet-public"><i class="fab fa-github"></i></a>
-* I led a team of 3 to create Octet, an Emacs-like text editor written in OCaml.
-* I implemented and compared multiple implementations of the text buffer to improve worst-case performance on operations such as pasting many lines of input.
-* I tested the backend extensively with OUnit, writing glass-box and random tests.
-
-
-## PrairieLearn Online Modules <a href="https://github.com/PrairieLearn/PrairieLearn/pull/4466"><i class="fab fa-github"></i></a>
-* I designed new online exercises with MAE 2020 instructors for free-body diagrams.
-* I wrote the frontend (FabricJS) and backend (Python) to auto-grade submissions, adding new features to target common errors in student understanding.
-* I used A/B testing and co-authored a paper on improvement in student outcomes.
 <br>
 <br>
 <br>
