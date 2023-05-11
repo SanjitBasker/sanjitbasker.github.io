@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sanjitbasker.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sanjitbasker.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-11T01:52:51+00:00</updated><id>https://sanjitbasker.github.io/feed.xml</id><title type="html">Sanjit Basker</title><subtitle>My personal portfolio website (draft iteration, for now).
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sanjitbasker.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sanjitbasker.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-11T14:25:02+00:00</updated><id>https://sanjitbasker.github.io/feed.xml</id><title type="html">Sanjit Basker</title><subtitle>My personal portfolio website (draft iteration, for now).
 </subtitle><entry><title type="html">PrairieLearn Online Modules</title><link href="https://sanjitbasker.github.io/blog/2023/prairie-learn/" rel="alternate" type="text/html" title="PrairieLearn Online Modules" /><published>2023-01-01T08:00:00+00:00</published><updated>2023-01-01T08:00:00+00:00</updated><id>https://sanjitbasker.github.io/blog/2023/prairie-learn</id><content type="html" xml:base="https://sanjitbasker.github.io/blog/2023/prairie-learn/"><![CDATA[<h2 id="highlights">Highlights</h2>
 <ul>
   <li>I designed new online exercises with MAE 2020 instructors for free-body diagrams 🏗️</li>
@@ -63,4 +63,118 @@ All of these tools are standard in industry, but this project was my first expos
 
 <!-- For this assignment, I’m asking you to reflect on what you’ve done and explain the choices you’ve made in terms of some of the language we have learned—from keywords in lectures, examples we’ve gone over, or points made in writer/designer. Your goal, in other words, is to justify Given that, what aspects of your site did you choose to make that way, and how do they showcase your professionalism as a computer scientist or an aerospace engineer? -->
 
-<!-- https://vb-cs.github.io/Professional-Portfolio/index.html#hero -->]]></content><author><name></name></author><summary type="html"><![CDATA[implementing and testing the paired-vector element]]></summary></entry></feed>
+<!-- https://vb-cs.github.io/Professional-Portfolio/index.html#hero -->]]></content><author><name></name></author><summary type="html"><![CDATA[implementing and testing the paired-vector element]]></summary></entry><entry><title type="html">OCTET</title><link href="https://sanjitbasker.github.io/blog/2022/octet/" rel="alternate" type="text/html" title="OCTET" /><published>2022-01-01T08:00:00+00:00</published><updated>2022-01-01T08:00:00+00:00</updated><id>https://sanjitbasker.github.io/blog/2022/octet</id><content type="html" xml:base="https://sanjitbasker.github.io/blog/2022/octet/"><![CDATA[<h2 id="highlights">Highlights</h2>
+<ul>
+  <li>I learned a functional programming language, OCaml 🐪</li>
+  <li>I worked in a group of 3 to create Octet, an Emacs-like text editor ⚛️</li>
+  <li>I designed the interface for and implemented a text buffer 📁</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<h2 id="basics-of-ocaml">Basics of OCaml</h2>
+
+<p>Unlike most programming languages, OCaml is functional: this means that rather than changing the state of variables (or even “objects”) throughout a program, each name (like a variable <code class="language-plaintext highlighter-rouge">x</code>) is only assigned to once. The main abstraction provided by functional languages is that of first-class functions: “first-class” here means that these functions can be stored into variables just like integers and booleans.</p>
+
+<p>Here’s a simple program written in OCaml that implements insertion sort.</p>
+<div class="language-ocaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">(* taken from CS 3110, spring 2022 *)</span>
+<span class="k">let</span> <span class="k">rec</span> <span class="n">isort</span> <span class="o">=</span>
+  <span class="c">(* insert [x] into its correct position in [lst] and return the result *)</span>
+  <span class="k">let</span> <span class="k">rec</span> <span class="n">insert</span> <span class="n">x</span> <span class="n">lst</span> <span class="o">=</span>
+    <span class="k">match</span> <span class="n">lst</span> <span class="k">with</span>
+    <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="p">[</span> <span class="n">x</span> <span class="p">]</span>
+    <span class="o">|</span> <span class="n">h</span> <span class="o">::</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">h</span> <span class="k">then</span> <span class="n">x</span> <span class="o">::</span> <span class="n">h</span> <span class="o">::</span> <span class="n">t</span> <span class="k">else</span> <span class="n">h</span> <span class="o">::</span> <span class="n">insert</span> <span class="n">x</span> <span class="n">t</span>
+  <span class="k">in</span>
+  <span class="c">(* to sort a list, sort all but the first element and then insert the first element 
+     where it belongs
+     more concisely, "insert head into sorted tail" *)</span>
+  <span class="k">function</span>
+  <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="bp">[]</span>
+  <span class="o">|</span> <span class="n">h</span> <span class="o">::</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">insert</span> <span class="n">h</span> <span class="p">(</span><span class="n">isort</span> <span class="n">t</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The above program is fairly easy to understand and reason about (once one gains familiarity with the syntax), but the runtime is quite slow for large lists: this is because in the worst case, the inner function <code class="language-plaintext highlighter-rouge">insert</code> takes stack space proportional to the size of its input, and so does <code class="language-plaintext highlighter-rouge">isort</code> itself. In an average-case input, the minimum element will be about halfway down the list. Regardless, the number of call-frame initializations performed in this implementation is \(O(n^2)\), which is an expensive price to pay for “readable” code.</p>
+
+<p>A compiler could rewrite this function in <a href="https://en.wikipedia.org/wiki/Continuation-passing_style">continuation-passing style</a> (which uses constant stack space), by adding an extra argument <code class="language-plaintext highlighter-rouge">cont</code>, which is a function representing the remainder of the computation:</p>
+
+<div class="language-ocaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">isort_cp</span> <span class="n">lst</span> <span class="o">=</span>
+  <span class="k">let</span> <span class="n">insert_cp</span> <span class="n">lst</span> <span class="n">x</span> <span class="o">=</span>
+    <span class="k">let</span> <span class="k">rec</span> <span class="n">aux</span> <span class="n">cont</span> <span class="n">x</span> <span class="n">lst</span> <span class="o">=</span>
+      <span class="k">match</span> <span class="n">lst</span> <span class="k">with</span>
+      <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="n">cont</span> <span class="p">[</span> <span class="n">x</span> <span class="p">]</span>
+      <span class="o">|</span> <span class="n">h</span> <span class="o">::</span> <span class="n">t</span> <span class="o">-&gt;</span>
+          <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">h</span> <span class="k">then</span> <span class="n">cont</span> <span class="p">(</span><span class="n">x</span> <span class="o">::</span> <span class="n">lst</span><span class="p">)</span>
+          <span class="k">else</span> <span class="n">aux</span> <span class="p">(</span><span class="k">fun</span> <span class="n">l</span> <span class="o">-&gt;</span> <span class="n">cont</span> <span class="p">(</span><span class="n">h</span> <span class="o">::</span> <span class="n">l</span><span class="p">))</span> <span class="n">x</span> <span class="n">t</span>
+    <span class="k">in</span>
+    <span class="n">aux</span> <span class="p">(</span><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="n">x</span> <span class="n">lst</span>
+  <span class="k">in</span>
+  <span class="k">let</span> <span class="k">rec</span> <span class="n">aux</span> <span class="n">cont</span> <span class="n">lst</span> <span class="o">=</span>
+    <span class="k">match</span> <span class="n">lst</span> <span class="k">with</span>
+    <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="n">cont</span> <span class="bp">[]</span>
+    <span class="o">|</span> <span class="n">h</span> <span class="o">::</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">aux</span> <span class="p">(</span><span class="k">fun</span> <span class="n">l</span> <span class="o">-&gt;</span> <span class="n">cont</span> <span class="p">(</span><span class="n">insert_cp</span> <span class="n">l</span> <span class="n">h</span><span class="p">))</span> <span class="n">t</span>
+  <span class="k">in</span>
+  <span class="n">aux</span> <span class="p">(</span><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="n">lst</span>
+</code></pre></div></div>
+
+<p>As it turns out, storing an entire function is not necessary in this case and we can get by with <code class="language-plaintext highlighter-rouge">pred</code>, which is just the portion of the list we’ve traversed. And instead of “inserting head into sorted tail,” we can just insert the elements from the original list one by one, into an accumulator initialized as the empty list <code class="language-plaintext highlighter-rouge">[]</code>.</p>
+
+<div class="language-ocaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">(* written by me *)</span>
+<span class="k">let</span> <span class="n">isort_tr</span> <span class="n">lst</span> <span class="o">=</span>
+  <span class="k">let</span> <span class="n">insert_tr</span> <span class="n">lst</span> <span class="n">x</span> <span class="o">=</span>
+    <span class="k">let</span> <span class="k">rec</span> <span class="n">aux</span> <span class="n">pred</span> <span class="n">x</span> <span class="o">=</span> <span class="k">function</span>
+      <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="nn">List</span><span class="p">.</span><span class="n">rev_append</span> <span class="n">pred</span> <span class="p">[</span> <span class="n">x</span> <span class="p">]</span>
+      <span class="o">|</span> <span class="n">h</span> <span class="o">::</span> <span class="n">t</span> <span class="o">-&gt;</span>
+          <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">h</span> <span class="k">then</span> <span class="nn">List</span><span class="p">.</span><span class="n">rev_append</span> <span class="p">(</span><span class="n">x</span> <span class="o">::</span> <span class="n">pred</span><span class="p">)</span> <span class="p">(</span><span class="n">h</span> <span class="o">::</span> <span class="n">t</span><span class="p">)</span>
+          <span class="k">else</span> <span class="n">aux</span> <span class="p">(</span><span class="n">h</span> <span class="o">::</span> <span class="n">pred</span><span class="p">)</span> <span class="n">x</span> <span class="n">t</span>
+    <span class="k">in</span>
+    <span class="n">aux</span> <span class="bp">[]</span> <span class="n">x</span> <span class="n">lst</span>
+  <span class="k">in</span>
+  <span class="nn">List</span><span class="p">.</span><span class="n">fold_left</span> <span class="n">insert_tr</span> <span class="bp">[]</span> <span class="n">lst</span>
+</code></pre></div></div>
+
+<p>The library functions <a href="https://v2.ocaml.org/api/List.html#VALfold_left"><code class="language-plaintext highlighter-rouge">List.fold_left</code></a> and <a href="https://v2.ocaml.org/api/List.html#VALrev_append"><code class="language-plaintext highlighter-rouge">List.rev_append</code></a> are themselves tail-recursive, meaning that this entire function uses constant stack space!</p>
+
+<p>The optimization is important if the lists we’re working with are long. The <a href="https://v2.ocaml.org/api/List.html"><code class="language-plaintext highlighter-rouge">List</code></a> documentation says it makes a difference when the length is around 10000. Indeed, on my machine <code class="language-plaintext highlighter-rouge">isort</code> has a noticeable delay for a reverse-sorted input of size 5000 while <code class="language-plaintext highlighter-rouge">isort_tr</code> is fast even for 20000 elements.</p>
+
+<p><br /></p>
+
+<h2 id="project-proposal-and-philosophy">Project Proposal and Philosophy</h2>
+
+<p>As a final project for this class, my group decided to implement a text editor with keybindings similar to Emacs. We decided to interface with <a href="https://github.com/pqwy/notty"><code class="language-plaintext highlighter-rouge">Notty</code></a>, a package for displaying text to the terminal. We also researched options for autoformatting and syntax-highlighting code and decided to use <a href="https://github.com/ocaml/ocaml-lsp"><code class="language-plaintext highlighter-rouge">ocaml-lsp</code></a>.</p>
+
+<p>In this project, we prioritized building end-to-end. We decided (somewhat ambitiously) that our first milestone would be a bare-bones text editor with all our dependencies set up, and that for the second and third sprint we’d work on the backend and frontend in parallel while maintaining the interface from the prototype. This structure is described in <em>Pragmatic Programmer</em> as a “tracer bullet.”</p>
+
+<p><br /></p>
+
+<h2 id="project-management-and-accountability">Project Management and Accountability</h2>
+
+<p>Since I was working in a group of 3, it was important for us to keep each other accountable. We reported to each other weekly and had three progress update meetings with our “project manager,” a CS 3110 TA.</p>
+
+<p><img src="/assets/img/octet-images/scope2.png" alt="drawing" width="500" class="center" /></p>
+
+<div class="caption">Here's a screenshot from our second progress report. We delivered on most of what was planned and delayed searching file contents to our third sprint.</div>
+
+<p><br /></p>
+
+<h2 id="buffer-implementation">Buffer Implementation</h2>
+
+<p>My task was to implement the buffer which allowed for modifications to the text. The buffer implementation is nontrivial because inserting or removing a character from a string is not an \(O(1)\) operation. However, based on the expected usage (for example, writing a long paragraph the same point in the text editor vs. lightly editing words throughout a file) the performance of an “optimal” buffer implementation can vary.</p>
+
+<p>Our first buffer was just a list of strings, which had very poor asymptotic performance but was fine for small text files. We used this in our first milestone and made it a priority to rewrite as part of the second sprint.</p>
+
+<p>The key insight we had in improving the buffer is that the user must first <em>move</em> the cursor to the location where the text is being inserted. While our prior implementations simply stored the cursor location as a pair of integers and updated that field. In our later implementations, we actually updated the backend’s representation of the current line every time the cursor was moved. Technically, this worsened our latency, but it majorly improved our throughput on workloads consisting of lightly editing various parts of a line.</p>
+
+<p>The one aspect of our runtime which we were not able to effectively amortize was memory allocation: when the buffer ran out of space, we had to allocate a larger one and copy over characters. Because our text editor is single-threaded, this latency cannot be masked to the user and the inputs may lag. However, by setting a large resize factor, we ensure that this situation occurs very rarely, and only when the buffer is growing for the first time.</p>
+
+<p>In testing my buffer, I kept around the old implementations and tested extensively with OUnit. I wrote glass-box and random tests and compared the behavior of each implementation to ensure that it matched the implementation backed by a list of strings (which was straightforward enough that we could treat it like a specification).</p>
+
+<p><img src="/assets/img/octet-images/screenshot.png" alt="drawing" width="500" class="center" /></p>
+
+<div class="caption">Here's our text editor in action. Syntax highlighting is enabled for OCaml, and some text is highlighted and copied to the clipboard.</div>
+
+<p><br /></p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>While our goal in building an end-to-end prototype in the first sprint was ambitious, I think that it was effective because it forced us to (1) plan out the interfaces we’d use and (2) gave us space to work on things in parallel in the following sprints.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[creating a text editor in OCaml]]></summary></entry></feed>
