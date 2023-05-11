@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I've accepted an offer to work at Akuna Capital this summer! 🙌
+I've accepted an offer to work at Akuna Capital this summer 🤝

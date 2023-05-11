@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi, I'm Sanjit! I study Computer Science at Cornell University, with a minor in Aerospace Engineering 🚀.
 
-I'm currently interested in quantitatve as well as development roles in the trading industry. This summer, I'll be at [Akuna Capital](https://akunacapital.com/) as a quant developer. Last summer, I was a developer intern at [SIG](https://sig.com).
+I'm currently interested in quantitative as well as development roles in the trading industry. This summer, I'll be a quantitative developer intern at [Akuna Capital](https://akunacapital.com/). Last summer, I was a developer intern at [SIG](https://sig.com).
 
 I love thinking about problems in mathematics and computer science. As a TA for CS 4820, I've been sharing the lessons I've learned for 4 semesters.
 
@@ -113,7 +113,7 @@ I love thinking about problems in mathematics and computer science. As a TA for 
 
 ##### Teaching Assistant
 * I help run review sessions, write programming assignments, and manage the autograder for CS 4820: Intro Analysis of Algorithms.
-* I help 100+ students in weekly recitations and the online Q\&A forums.
+* I help 100+ students in weekly recitations and the online Q&A forums.
 
 
 <br>
