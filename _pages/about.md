@@ -17,7 +17,8 @@ _styles: >
   img.center {
     display: block;
     margin: 0 auto;
-    border: 3px solid #2698BA
+    border: 3px solid #2698BA;
+    border-radius: 5px
   }
   div.caption {
    margin-left: auto;
@@ -47,13 +48,11 @@ I love thinking about problems in mathematics and computer science. As a TA for 
 ## PrairieLearn Online Modules <a href="https://github.com/PrairieLearn/PrairieLearn/pull/4466"><i class="fab fa-github"></i></a> <a href="/blog/2023/prairie-learn/"><i class="fa-solid fa-file-invoice"></i></a>
 <a href="/blog/2023/prairie-learn/"><img src="/assets/img/pl-images/loppers.png" alt="drawing" width="500" class="center"/></a>
 
-## OcTET <a href="https://github.com/SanjitBasker/octet-public"><i class="fab fa-github"></i></a>
-* I led a team of 3 to create Octet, an Emacs-like text editor written in OCaml.
-* I implemented and compared multiple implementations of the text buffer to improve worst-case performance on operations such as pasting many lines of input.
-* I tested the backend extensively with OUnit, writing glass-box and random tests.
+<br>
 
-<br>
-<br>
+## OCTET <a href="https://github.com/SanjitBasker/octet-public"><i class="fab fa-github"></i></a> <a href="/blog/2022/octet/"><i class="fa-solid fa-file-invoice"></i></a>
+<a href="/blog/2022/octet/"><img src="/assets/img/octet-images/screenshot.png" alt="drawing" width="500" class="center"/></a>
+
 <br>
 <br>
 
